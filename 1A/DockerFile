@@ -1,0 +1,17 @@
+# Use slim Python image, amd64 platform as required
+FROM --platform=linux/amd64 python:3.9-slim
+
+# Set working directory inside container
+WORKDIR /app
+
+# Copy only requirements first to leverage Docker layer caching
+COPY requirements.txt .
+
+# Install dependencies inside container
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all project files into /app
+COPY . .
+
+# Default command: run main.py
+CMD ["python", "main.py"]

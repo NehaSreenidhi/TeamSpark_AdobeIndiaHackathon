@@ -39,7 +39,7 @@ This repository contains solutions for both Round 1A and Round 1B of the Adobe I
 
 
 ```
-## Project Structure of 1A
+## Project Structure of 1B
 ```plain text
 1B/
 ├── analyzer

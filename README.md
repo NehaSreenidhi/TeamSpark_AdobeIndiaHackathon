@@ -56,3 +56,14 @@ This repository contains solutions for both Round 1A and Round 1B of the Adobe I
 ├── Dockerfile
 └── README.md
 ```
+
+## Execution Instructions
+### For 1A
+```bash
+docker run --rm -v "%cd%\1A\input:/app/input" -v "%cd%\1A\output:/app/output" --network none pdf-structure-extractor-1a
+```
+
+### For 1B
+```bash
+docker run --rm -v "%cd%\1B\input:/app/input" -v "%cd%\1B\output:/app/output" --network none pdf-structure-extractor-1b
+```
